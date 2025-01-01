@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Przyrzady Ustalajaco-Mocujace Stosowane Przy Toczeniu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000; /* Very dark background */
+            color: #e0e0e0; /* Light text color */
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2 {
+            color: #e0e0e0; /* Light text color */
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 36px;
+            padding: 10px;
+            background-color: #8e44ad; /* Purple background for title */
+            color: white;
+            border-radius: 5px;
+            max-width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h2 {
+            margin-top: 20px;
+            font-size: 28px;
+            border-bottom: 2px solid #8e44ad; /* Purple border for section titles */
+            padding-bottom: 5px;
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 16px;
+            padding: 10px 15px;
+            margin: 15px;
+            background-color: #1a1a1a; /* Darker background for paragraphs */
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+
+        ul li {
+            background-color: #121212; /* Dark background for list items */
+            color: #e0e0e0; /* Light text for list items */
+            padding: 10px;
+            border-radius: 5px;
+            margin: 5px 0;
+        }
+
+        a.button {
+            display: block;
+            background-color: #8e44ad; /* Purple for buttons */
+            color: white;
+            padding: 20px 30px;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 20px auto;
+            width: 350px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        a.button:hover {
+            background-color: #9b59b6; /* Lighter purple for hover effect */
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #121212; /* Dark footer background */
+            color: #e0e0e0; /* Light footer text */
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .category-sorter {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .category-sorter select {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #2c3e50; /* Light black border */
+            background-color: #1a1a1a; /* Dark background for select */
+            color: #e0e0e0; /* Light text in select */
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .category-sorter select option {
+            background-color: #1a1a1a; /* Darker background for options */
+            color: #e0e0e0; /* Light text color for options */
+        }
+
+        .section {
+            background-color: #121212; /* Even darker background for sections */
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .section h2 {
+            color: #e0e0e0;
+        }
+
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 30px;
+                max-width: 80%;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            a.button {
+                width: 80%;
+                font-size: 16px;
+                padding: 15px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="category-sorter">
+        <select onchange="changeContent(this.value)">
+            <option value="">Wybierz projekt</option>
+            <option value="przyrzady">Przyrzady Ustalajaco-Mocujace Stosowane Przy Toczeniu</option>
+            <option value="projekt2">Projekt 2</option>
+            <option value="projekt3">Projekt 3</option>
+        </select>
+    </div>
+
+    <div id="przyrzady">
+        <h1>Przyrzady Ustalajaco-Mocujace Stosowane Przy Toczeniu</h1>
+        <p>Podczas toczenia wykorzystywane sa rozne przyrzady, ktore pomagaja w stabilnym zamocowaniu przedmiotu. To zapewnia bezpieczna i precyzyjna prace. Oto niektore z tych przyrzadow:</p>
+
+        <div class="section">
+            <h2>1. Uchwyty Tokarskie</h2>
+            <ul>
+                <li><strong>Trojszczekowy uchwyt samocentrujacy</strong> - stosowany do przedmiotow okraglych, np. walkow.</li>
+                <li><strong>Czteroszczekowy uchwyt niezalezny</strong> - uzywany przy przedmiotach o nieregularnych ksztaltach.</li>
+            </ul>
+            <p><a href="https://tse3.mm.bing.net/th?id=OIP.p0stscwzgSsXu0HPVMLydgHaKc&pid=Api" target="_blank" class="button">Przyklad uchwytu tokarskiego</a></p>
+            <p><a href="https://tse1.mm.bing.net/th?id=OIP.eI1dA_7NS1eQYhl32UEdnwHaFj&pid=Api" target="_blank" class="button">Przyklad czteroszczekowego uchwytu tokarskiego</a></p>
+        </div>
+
+        <div class="section">
+            <h2>2. Podpory i Plyty</h2>
+            <ul>
+                <li><strong>Podpory tokarskie</strong> - pomagaja w stabilizacji dlugich elementow, zapobiegajac ich drganiom podczas toczenia.</li>
+                <li><strong>Plyta czolowa</strong> - stosowana przy duzych lub nieregularnych przedmiotach, ktore musza byc przykrecone srubami.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>3. Inne Przyrzady</h2>
+            <ul>
+                <li><strong>Kolki ustalajace</strong> - pomagaja w precyzyjnym ustawieniu przedmiotu w odpowiedniej pozycji.</li>
+                <li><strong>Specjalne uchwyty i imadla</strong> - stosowane do mocowania malych lub nietypowych przedmiotow.</li>
+            </ul>
+            <p><a href="https://tse2.mm.bing.net/th?id=OIP.2bkaVGn-QWg6k4_Ch5PzJAHaFj&pid=Api" target="_blank" class="button">Przyklad specjalnych uchwytow</a></p>
+        </div>
+    </div>
+
+    <div id="projekt2" style="display:none;">
+        <h1>Projekt 2</h1>
+        <p>Miejsce na inne projekty</p>
+    </div>
+
+    <div id="projekt3" style="display:none;">
+        <h1>Projekt 3</h1>
+        <p>Miejsce na inne projekty</p>
+    </div>
+
+    <footer>
+        <p>Wszystkie prawa zastrzeżone &copy; 2025</p>
+    </footer>
+
+    <script>
+        function changeContent(selectedProject) {
+            document.querySelectorAll('div[id^="projekt"]').forEach(function (project) {
+                project.style.display = 'none';
+            });
+
+            if (selectedProject) {
+                document.getElementById(selectedProject).style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
