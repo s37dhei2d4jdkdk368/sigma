@@ -209,6 +209,17 @@
             opacity: 1;
         }
 
+        .corner-image {
+            position: fixed;
+            bottom: 1rem;
+            left: 1rem;
+            width: 50px;
+            height: auto;
+            z-index: 1000;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 2rem;
@@ -285,6 +296,8 @@
     </main>
 
     <button id="scroll-top" onclick="scrollToTop()">↑</button>
+
+    <img src="Screenshot_2025-01-01-22-37-51-70_e4424258c8b8649f6e67d283a50a2cbc.jpg" alt="Corner Image" class="corner-image">
 
     <footer>
         <div class="container">
