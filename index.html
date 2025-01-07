@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Przyrządy ustalająco-mocujące stosowane przy frezowaniu - kompendium wiedzy">
+    <meta name="description" content="Przyrządy ustalająco-mocujące stosowane przy frezowaniu">
     <title>Przyrządy Ustalająco-Mocujące | Frezowanie</title>
     <style>
         :root {
@@ -187,11 +187,11 @@
         .corner-image {
             position: fixed;
             bottom: 1rem;
-            left: 1rem;
-            width: 50px;
-            height: auto;
+            right: 1rem;
+            width: 15px;
+            height: 15px;
             z-index: 1000;
-            border-radius: 8px;
+            border-radius: 50%;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
 
@@ -227,7 +227,8 @@
     <main class="container">
         <div id="przyrzady">
             <h1>Przyrządy Ustalająco-Mocujące Stosowane Przy Frezowaniu</h1>
-            
+            <!-- Zawartość główna strony -->
+
             <section class="section">
                 <h2>Imadła Frezarskie</h2>
                 <div class="tool-list">
@@ -239,49 +240,47 @@
                     <div class="tool-card">
                         <h3>Imadło Obrotowe Wielofunkcyjne GEKO</h3>
                         <p>Wielofunkcyjne imadło obrotowe o rozmiarze 100mm idealnie nadaje się do mocowania różnych kształtów. Dzięki obrotowej podstawie można łatwo zmieniać kąt obróbki bez potrzeby przestawiania elementu.</p>
-                        <a href="https://e-technik.pl/imadlo-obrotowe-wielofunkcyjne-439-100mm-geko/" class="button">Zobacz więcej</a>
+                        <a href="https://e-technik.pl/imadlo-obrotowe-wielofunkcyjne-geko-p-2066.html" class="button">Zobacz więcej</a>
                     </div>
                 </div>
             </section>
-
-            <section class="section">
-                <h2>Inne Narzędzia Mocujące</h2>
-                <div class="tool-list">
-                    <div class="tool-card">
-                        <h3>Imadło Samocentrujące HLD-60GG/HV</h3>
-                        <p>To narzędzie pozwala na szybkie ustawienie i zamocowanie elementów o różnych kształtach. Doskonale sprawdza się w zaawansowanych pracach frezarskich.</p>
-                        <a href="https://www.kammar24.pl/precyzyjne-imadlo-maszynowe-samocentrujace-hld-60gghv-p-78155.html" class="button">Zobacz więcej</a>
-                    </div>
-                    <div class="tool-card">
-                        <h3>Imadło Obrotowe 125mm GEKO</h3>
-                        <p>Imadło obrotowe o większej podstawie idealnie nadaje się do obrabiania większych elementów. Wyposażone w stabilne mocowanie i trwałą konstrukcję.</p>
-                        <a href="https://e-technik.pl/imadlo-obrotowe-wielofunkcyjne-539-125mm-geko" class="button">Zobacz więcej</a>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <div id="projekt2" style="display: none;">
-            <h1>Projekt 2</h1>
-            <p>Treść projektu 2...</p>
-        </div>
-
-        <div id="projekt3" style="display: none;">
-            <h1>Projekt 3</h1>
-            <p>Treść projektu 3...</p>
         </div>
     </main>
 
     <footer>
-        <div class="container">
-            <p>Na zakończenie warto dodać, że przyrządy ustalająco-mocujące pełnią kluczową rolę w procesie frezowania, a ich dobór ma bezpośredni wpływ na jakość oraz precyzję obróbki. Dobre przyrządy pozwalają na stabilne mocowanie obrabianych elementów, co umożliwia uzyskanie odpowiednich tolerancji i dokładności wymiarowej. Dzięki nim można zoptymalizować procesy produkcyjne, skrócić czas obróbki i zredukować ryzyko błędów.
-
-            Istnieje wiele różnych typów przyrządów, takich jak imadła frezarskie, uchwyty magnetyczne, czy specjalistyczne uchwyty kątowe, które można dostosować do różnych rodzajów materiałów i geometrii obrabianych przedmiotów. Przyrządy ustalająco-mocujące różnią się także pod względem konstrukcji – od prostych, manualnych modeli po bardziej zaawansowane systemy automatyczne.
-
-            Wybór odpowiedniego przyrządu zależy od wielu czynników, takich jak rodzaj materiału (np. stal, aluminium, tworzywa sztuczne), kształt obrabianego elementu, oraz wymagania dotyczące dokładności i powtarzalności procesu. Należy także pamiętać o odpowiedniej konserwacji przyrządów, aby utrzymać ich wysoką funkcjonalność i wydajność przez długi czas.
-
-            Warto także zauważyć, że technologia i narzędzia wykorzystywane w procesach obróbczych są stale rozwijane, a w przyszłości możemy spodziewać się pojawienia nowych, bardziej zaawansowanych rozwiązań, które będą miały jeszcze większy wpływ na poprawę efektywności produkcji i jakości wyrobów.</p>
-        </div>
+        <p>&copy; 2025 Frezowanie. Wszystkie prawa zastrzeżone.</p>
     </footer>
+
+    <div class="corner-image">
+        <img src="Screenshot_2025-01-01-22-37-51-70_e4424258c8b8649f6e67d283a50a2cbc.jpg" alt="Screenshot" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+
+    <script>
+        // Scroll to top button
+        const scrollTopBtn = document.getElementById("scroll-top");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.add("visible");
+            } else {
+                scrollTopBtn.classList.remove("visible");
+            }
+        });
+
+        scrollTopBtn.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        function changeContent(value) {
+            // Change content based on the selected project
+            document.querySelectorAll(".container > div").forEach((section) => {
+                section.style.display = "none";
+            });
+
+            if (value) {
+                document.getElementById(value).style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>
