@@ -184,6 +184,17 @@
             opacity: 1;
         }
 
+        .corner-image {
+            position: fixed;
+            bottom: 1rem;
+            left: 1rem;
+            width: 50px;
+            height: auto;
+            z-index: 1000;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 2rem;
@@ -214,13 +225,6 @@
     </header>
 
     <main class="container">
-        <p style="margin-top: 2rem;">
-            Przyrządy ustalająco-mocujące pełnią kluczową rolę w procesie frezowania, a ich dobór ma bezpośredni wpływ na jakość oraz precyzję obróbki. Dobre przyrządy pozwalają na stabilne mocowanie obrabianych elementów, co umożliwia uzyskanie odpowiednich tolerancji i dokładności wymiarowej. Dzięki nim można zoptymalizować procesy produkcyjne, skrócić czas obróbki i zredukować ryzyko błędów.
-        </p>
-        <p>
-            Istnieje wiele różnych typów przyrządów, takich jak imadła frezarskie, uchwyty magnetyczne, czy specjalistyczne uchwyty kątowe. Wybór odpowiedniego przyrządu zależy od materiału, kształtu elementu i wymagań dokładności. Odpowiednia konserwacja przyrządów zapewnia ich długotrwałą funkcjonalność i wydajność.
-        </p>
-
         <div id="przyrzady">
             <h1>Przyrządy Ustalająco-Mocujące Stosowane Przy Frezowaniu</h1>
             
@@ -229,13 +233,11 @@
                 <div class="tool-list">
                     <div class="tool-card">
                         <h3>Precyzyjne Imadło Maszynowe AVC-200G/HV</h3>
-                        <img src="https://via.placeholder.com/300x200" alt="Precyzyjne Imadło Maszynowe" style="width:100%; border-radius:8px; margin-bottom:1rem;">
                         <p>To imadło umożliwia precyzyjne i stabilne mocowanie elementów podczas frezowania. Jest wyposażone w system samocentrowania, co znacząco przyspiesza pracę i poprawia dokładność obróbki.</p>
                         <a href="https://www.kammar24.pl/precyzyjne-imadlo-maszynowe-200x250mm-avc-200ghv-p-78159.html" class="button">Zobacz więcej</a>
                     </div>
                     <div class="tool-card">
                         <h3>Imadło Obrotowe Wielofunkcyjne GEKO</h3>
-                        <img src="https://via.placeholder.com/300x200" alt="Imadło Obrotowe Wielofunkcyjne" style="width:100%; border-radius:8px; margin-bottom:1rem;">
                         <p>Wielofunkcyjne imadło obrotowe o rozmiarze 100mm idealnie nadaje się do mocowania różnych kształtów. Dzięki obrotowej podstawie można łatwo zmieniać kąt obróbki bez potrzeby przestawiania elementu.</p>
                         <a href="https://e-technik.pl/imadlo-obrotowe-wielofunkcyjne-439-100mm-geko/" class="button">Zobacz więcej</a>
                     </div>
@@ -247,15 +249,13 @@
                 <div class="tool-list">
                     <div class="tool-card">
                         <h3>Imadło Samocentrujące HLD-60GG/HV</h3>
-                        <img src="https://via.placeholder.com/300x200" alt="Imadło Samocentrujące" style="width:100%; border-radius:8px; margin
-                        <p>Imadło samocentrujące o wysokiej precyzji, idealne do operacji frezowania oraz innych zastosowań wymagających precyzyjnego ustalania elementu.</p>
-                        <a href="https://przyklad-strona.pl/imadlo-samocentrujace" class="button">Zobacz więcej</a>
+                        <p>To narzędzie pozwala na szybkie ustawienie i zamocowanie elementów o różnych kształtach. Doskonale sprawdza się w zaawansowanych pracach frezarskich.</p>
+                        <a href="https://www.kammar24.pl/precyzyjne-imadlo-maszynowe-samocentrujace-hld-60gghv-p-78155.html" class="button">Zobacz więcej</a>
                     </div>
                     <div class="tool-card">
-                        <h3>Uchwyty Magnetyczne</h3>
-                        <img src="https://via.placeholder.com/300x200" alt="Uchwyt Magnetyczny" style="width:100%; border-radius:8px; margin-bottom:1rem;">
-                        <p>Uchwyty magnetyczne umożliwiają szybkie i wygodne mocowanie detali metalowych. Są niezastąpione w sytuacjach, gdzie wymagane jest częste zmienianie elementów podczas obróbki.</p>
-                        <a href="https://przyklad-strona.pl/uchwyty-magnetyczne" class="button">Zobacz więcej</a>
+                        <h3>Imadło Obrotowe 125mm GEKO</h3>
+                        <p>Imadło obrotowe o większej podstawie idealnie nadaje się do obrabiania większych elementów. Wyposażone w stabilne mocowanie i trwałą konstrukcję.</p>
+                        <a href="https://e-technik.pl/imadlo-obrotowe-wielofunkcyjne-539-125mm-geko/" class="button">Zobacz więcej</a>
                     </div>
                 </div>
             </section>
@@ -263,41 +263,35 @@
     </main>
 
     <footer>
-        <p>Strona przygotowana jako przykład użycia przyrządów ustalająco-mocujących przy frezowaniu.</p>
+        <p>&copy; 2025 Przyrządy Ustalająco-Mocujące. Wszelkie prawa zastrzeżone.</p>
     </footer>
 
-    <div id="scroll-top" onclick="scrollToTop()">↑</div>
+    <div id="scroll-top" onclick="scrollToTop()">
+        ↑
+    </div>
+
+    <img src="corner-image.jpg" alt="Logo" class="corner-image">
 
     <script>
-        const scrollTopButton = document.getElementById('scroll-top');
+        function changeContent(project) {
+            if (project) {
+                window.location.href = `#${project}`;
+            }
+        }
 
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
+        window.onscroll = function () {
+            let scrollTopButton = document.getElementById('scroll-top');
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
                 scrollTopButton.classList.add('visible');
             } else {
                 scrollTopButton.classList.remove('visible');
             }
-        });
+        };
 
         function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
         }
-
-        function changeContent(project) {
-            const przyrzady = document.getElementById('przyrzady');
-            if (project === 'przyrzady') {
-                przyrzady.style.display = 'block';
-            } else {
-                przyrzady.style.display = 'none';
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            document.getElementById('projectSelect').value = '';
-        });
     </script>
 </body>
 </html>
