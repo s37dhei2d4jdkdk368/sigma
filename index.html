@@ -227,6 +227,8 @@
     <main class="container">
         <div id="przyrzady">
             <h1>Przyrządy Ustalająco-Mocujące Stosowane Przy Frezowaniu</h1>
+            <p>Przyrządy ustalająco-mocujące są niezwykle ważnym elementem w obróbce skrawaniem, szczególnie podczas frezowania. Ich głównym zadaniem jest zapewnienie stabilnego mocowania obrabianego elementu w maszynie, co pozwala na uzyskanie precyzyjnych wymiarów i kształtów detalu. Dzięki zastosowaniu odpowiednich przyrządów, jak imadła, uchwyty czy zaciski, możliwe jest efektywne i bezpieczne przeprowadzenie procesu frezowania, minimalizując ryzyko uszkodzenia narzędzi lub detalu. Prawidłowy dobór przyrządu jest kluczowy dla jakości obróbki oraz efektywności produkcji.</p>
+            <p>Wśród najczęściej stosowanych narzędzi mocujących w procesie frezowania wyróżniamy m.in. imadła frezarskie, imadła obrotowe oraz imadła samocentrujące. Każdy z tych przyrządów ma swoje specyficzne zalety i jest stosowany w zależności od rodzaju obróbki i kształtu obrabianych detali.</p>
             
             <section class="section">
                 <h2>Imadła Frezarskie</h2>
@@ -241,17 +243,17 @@
                         <p>Wielofunkcyjne imadło obrotowe o rozmiarze 100mm idealnie nadaje się do mocowania różnych kształtów. Dzięki obrotowej podstawie można łatwo zmieniać kąt obróbki bez potrzeby przestawiania elementu.</p>
                         <a href="https://e-technik.pl/imadlo-obrotowe-wielofunkcyjne-439-100mm-geko/" class="button">Zobacz więcej</a>
                     </div>
+                    <div class="tool-card">
+                        <h3>Imadło Samocentrujące HLD-60GG/HV</h3>
+                        <p>To narzędzie pozwala na szybkie ustawienie i zamocowanie elementów o różnych kształtach. Doskonale sprawdza się w zaawansowanych pracach frezarskich.</p>
+                        <a href="https://www.kammar24.pl/precyzyjne-imadlo-maszynowe-samocentrujace-hld-60gghv-p-78155.html" class="button">Zobacz więcej</a>
+                    </div>
                 </div>
             </section>
 
             <section class="section">
                 <h2>Inne Narzędzia Mocujące</h2>
                 <div class="tool-list">
-                    <div class="tool-card">
-                        <h3>Imadło Samocentrujące HLD-60GG/HV</h3>
-                        <p>To narzędzie pozwala na szybkie ustawienie i zamocowanie elementów o różnych kształtach. Doskonale sprawdza się w zaawansowanych pracach frezarskich.</p>
-                        <a href="https://www.kammar24.pl/precyzyjne-imadlo-maszynowe-samocentrujace-hld-60gghv-p-78155.html" class="button">Zobacz więcej</a>
-                    </div>
                     <div class="tool-card">
                         <h3>Imadło Obrotowe 125mm GEKO</h3>
                         <p>Imadło obrotowe o większej podstawie idealnie nadaje się do obrabiania większych elementów. Wyposażone w stabilne mocowanie i trwałą konstrukcję.</p>
@@ -263,35 +265,34 @@
     </main>
 
     <footer>
-        <p>&copy; kubus komendant 😱</p>
+        <p>kubus komendant 😍 mega spoko</p>
     </footer>
 
-    <div id="scroll-top" onclick="scrollToTop()">
-        ↑
-    </div>
-
-    <img src="Screenshot_2025-01-01-22-37-51-70_e4424258c8b8649f6e67d283a50a2cbc.jpg" alt="Logo" class="corner-image">
+    <button id="scroll-top" onclick="scrollToTop()">↑</button>
 
     <script>
-        function changeContent(project) {
-            if (project) {
-                window.location.href = `#${project}`;
+        function changeContent(value) {
+            const contentSections = document.querySelectorAll('.container > div');
+            contentSections.forEach(section => {
+                section.style.display = 'none';
+            });
+            if (value) {
+                document.getElementById(value).style.display = 'block';
             }
         }
 
-        window.onscroll = function () {
-            let scrollTopButton = document.getElementById('scroll-top');
-            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        window.addEventListener('scroll', () => {
+            const scrollTopButton = document.getElementById('scroll-top');
+            if (window.scrollY > 200) {
                 scrollTopButton.classList.add('visible');
             } else {
                 scrollTopButton.classList.remove('visible');
             }
-        };
-
-        function scrollToTop() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
+        });
     </script>
 </body>
 </html>
